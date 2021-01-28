@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Dear <%= @passenger.name %>,</h1>
+    <p>
+      You have successfully booked your flight ticket at example.com.<br>
+    </p>
+		<p>This is the confirmation of your flight details:</p>
+		<p>Selected date: <%= @selected_date %></p>
+		<table style="width:25%">
+			<tr style="text-align: left">
+				<th>Departure</th>
+				<th>Arrival</th>
+			</tr>
+			<tr>
+				<td><%= @departure_airport %></td>
+				<td><%= @arrival_airport %></td>
+			</tr>
+			<tr>
+				<td><%= @scheduled_time %></td>
+				<td><%= @arrival_time %></td>
+			</tr>
+		</table>
+		<p>Your booking number is <%= @passenger.booking.id %></p>
+    <p>Thanks for booking and have a great day!</p>
+  </body>
+</html>
